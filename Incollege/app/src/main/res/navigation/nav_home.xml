@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/home_navigation">
+
+    <fragment
+        android:id="@+id/home_navigation"
+        android:name="com.example.incollege.main.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/event_navigation"
+        android:name="com.example.incollege.main.ui.event.EventFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_event" />
+
+    <fragment
+        android:id="@+id/ormawa_navigation"
+        android:name="com.example.incollege.main.ui.ormawa.OrmawaFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_ormawa" >
+        <action
+            android:id="@+id/action_ormawa_navigation_to_nextOrmawaFragment"
+            app:popUpTo="@id/nextOrmawaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_navigation"
+        android:name="com.example.incollege.main.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/nextOrmawaFragment"
+        android:name="com.example.incollege.main.ui.ormawa.NextOrmawaFragment"
+        android:label="fragment_next_ormawa"
+        tools:layout="@layout/fragment_next_ormawa" />
+
+</navigation>

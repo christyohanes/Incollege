@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_navigation"
+        android:enabled="true"
+        android:icon="@drawable/selector_btn_nav_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/event_navigation"
+        android:enabled="true"
+        android:icon="@drawable/selector_btn_nav_event"
+        android:title="@string/event" />
+
+    <item
+        android:id="@+id/ormawa_navigation"
+        android:enabled="true"
+        android:icon="@drawable/selector_btn_nav_ormawa"
+        android:title="@string/ormawa" />
+
+    <item
+        android:id="@+id/profile_navigation"
+        android:enabled="true"
+        android:icon="@drawable/selector_btn_nav_profile"
+        android:title="@string/profile" />
+</menu>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ui.profile.visimisi.VisionMissionActivity">
+
+    <View
+        android:id="@+id/toolbar_vm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_vm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Visi Misi"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar_vm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar_vm" />
+
+    <ImageButton
+        android:id="@+id/btn_back_vm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorTransparant"
+        android:src="@drawable/ic_back_btn_primary"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar_vm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar_vm" />
+
+    <ImageView
+        android:id="@+id/iv_bg_vm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_bg_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_vm" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_visi_title_vm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_to_normal"
+        android:layout_marginTop="@dimen/normal_to_large"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Visi"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_bg_vm" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_visi_vm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_to_normal"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/small_to_normal"
+        android:background="@drawable/et_custom_desc_visi_misi"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/roboto_reguler"
+        android:gravity="start"
+        android:inputType="text|textMultiLine"
+        android:maxHeight="100dp"
+        android:paddingBottom="10dp"
+        android:scrollHorizontally="false"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/translucent_black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_visi_title_vm" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_misi_title_vm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_to_normal"
+        android:layout_marginTop="@dimen/normal_to_large"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Misi"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_visi_vm" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_misi_vm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_to_normal"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/small_to_normal"
+        android:background="@drawable/et_custom_desc_visi_misi"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/roboto_reguler"
+        android:gravity="start"
+        android:inputType="text|textMultiLine"
+        android:maxHeight="250dp"
+        android:paddingBottom="10dp"
+        android:scrollHorizontally="false"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/translucent_black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_misi_title_vm" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_vm"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="Simpan"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

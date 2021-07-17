@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Incollege</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="failed_btn_save_login_empty">Email dan Kata sandi harus diisi!</string>
+    <string name="home">Home</string>
+    <string name="event">Event</string>
+    <string name="ormawa">Ormawa</string>
+    <string name="profile">Profile</string>
+    <string name="failed_btn_save_pass_below_8">Password harus lebih dari 8 karakter</string>
+    <string name="failed_btn_save_login_email_false">Masukan email dengan benar</string>
+    <string name="asking_logout">Apakah kamu yakin ingin logout?</string>
+    <string name="no_bts">Tidak</string>
+    <string name="yes_bts">Ya, Saya yakin!</string>
+    <string name="badan_pengurus_harian">Badan Pengurus harian</string>
+    <string name="kepengurusan_lain">Kepengurusan lain</string>
+
+    <string-array name="spinner_pengurus">
+        <item>BPH</item>
+        <item>Kepengurusan Lain</item>
+    </string-array>
+</resources>

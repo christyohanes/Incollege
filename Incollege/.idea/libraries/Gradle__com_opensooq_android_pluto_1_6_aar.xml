@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.opensooq.android:pluto:1.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/850376d086c711cb1a94fed111f0f1ba/jetified-pluto-1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/850376d086c711cb1a94fed111f0f1ba/jetified-pluto-1.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/850376d086c711cb1a94fed111f0f1ba/jetified-pluto-1.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opensooq.android/pluto/1.6/523762392651b37937d198bcc63482af5c2ec72c/pluto-1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opensooq.android/pluto/1.6/103c5eb61beb81fc37c02c8b6f24af78b3ce26df/pluto-1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

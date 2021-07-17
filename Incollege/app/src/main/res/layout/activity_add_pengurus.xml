@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ui.profile.committee.AddPengurusActivity">
+
+    <View
+        android:id="@+id/toolbar_pengurus_add"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorGraySnow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_pengurus_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Pengurus"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar_pengurus_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar_pengurus_add" />
+
+    <ImageButton
+        android:id="@+id/btn_back_pengurus_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorTransparant"
+        android:src="@drawable/ic_back_btn_primary"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar_pengurus_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar_pengurus_add" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_user_photo_pengurus_add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_pengurus_add" />
+
+    <ImageButton
+        android:id="@+id/btn_user_photo_pengurus_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparant"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/ic_change_photo"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/civ_user_photo_pengurus_add"
+        app:layout_constraintEnd_toEndOf="@id/civ_user_photo_pengurus_add"
+        app:layout_constraintStart_toStartOf="@id/civ_user_photo_pengurus_add"
+        app:layout_constraintTop_toBottomOf="@id/civ_user_photo_pengurus_add" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_nama_pengurus_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/et_custom_pengurus_add"
+        android:fontFamily="@font/roboto_reguler"
+        android:hint="Nama"
+        android:inputType="text"
+        android:paddingStart="5dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/translucent_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_user_photo_pengurus_add"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_jabatan_pengurus_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/et_custom_pengurus_add"
+        android:fontFamily="@font/roboto_reguler"
+        android:hint="Posisi / Jabatan"
+        android:inputType="text"
+        android:paddingStart="5dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/translucent_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nama_pengurus_add"
+        tools:ignore="RtlSymmetry" />
+
+    <RadioGroup
+        android:id="@+id/rg_pengurus_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_jabatan_pengurus_add">
+
+        <RadioButton
+            android:id="@+id/rb_bph_pengurus_add"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/selector_radio_pengurus"
+            android:button="@color/colorTransparant"
+            android:fontFamily="@font/roboto_bold"
+            android:text="BPH"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_radio_pengurus_text"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_pengurus_add"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_radio_pengurus"
+            android:button="@color/colorTransparant"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Pengurus"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_radio_pengurus_text"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_pengurus_add"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="Simpan"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

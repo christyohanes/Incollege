@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "624733004306",
+    "project_id": "incollege-23525",
+    "storage_bucket": "incollege-23525.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624733004306:android:6205c7741f31d29f87aecb",
+        "android_client_info": {
+          "package_name": "com.example.incollege"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624733004306-t7hovih0rs74spqkjjptioc62pi62qid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbZO7nh206p5U-MoIzFKwCEy8MO0uzGqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624733004306-t7hovih0rs74spqkjjptioc62pi62qid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

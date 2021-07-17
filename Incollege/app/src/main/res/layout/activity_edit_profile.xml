@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ui.profile.EditProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/toolbar_edit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_profil_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Data Ormawa"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbar_edit" />
+
+        <ImageButton
+            android:id="@+id/btn_back_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorTransparant"
+            android:src="@drawable/ic_back_btn_primary"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbar_edit" />
+
+        <ImageView
+            android:id="@+id/iv_bg_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_bg_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_edit" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_user_photo_edit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_bg_edit" />
+
+        <ImageButton
+            android:id="@+id/btn_user_edit_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparant"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/ic_change_photo"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/civ_user_photo_edit"
+            app:layout_constraintEnd_toEndOf="@id/civ_user_photo_edit"
+            app:layout_constraintStart_toStartOf="@id/civ_user_photo_edit"
+            app:layout_constraintTop_toBottomOf="@id/civ_user_photo_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_desc_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/civ_user_photo_edit">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_desc_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:layout_marginTop="40dp"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_description"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_desc_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Deskripsi"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_desc_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_desc_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_desc_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_desc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_desc_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_visi_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_desc">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_visi_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_visi_misi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_visi_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Visi Misi"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_visi_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_visi_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_visi_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_visi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_visi_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_pengurus_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_visi">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_pengurus_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_pengurus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_pengurus_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Pengurus"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_pengurus_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_pengurus_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_pengurus_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_pengurus"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_pengurus_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_anggota_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_pengurus">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_anggota_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_anggota"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_anggota_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Anggota"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_anggota_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_anggota_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_anggota_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_anggota"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_anggota_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_kegiatan_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_anggota">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_kegiatan_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_kegiatan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_kegiatan_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Kegiatan"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_kegiatan_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_kegiatan_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_kegiatan_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_kegiatan"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_kegiatan_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_prestasi_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_kegiatan">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_prestasi_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_prestasi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_prestasi_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Prestasi"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_prestasi_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_prestasi_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_prestasi_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_prestasi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_prestasi_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_dokumentasi_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_prestasi">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_dokumentasi_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_dokumentasi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_dokumentasi_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Dokumentasi"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_dokumentasi_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_dokumentasi_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_dokumentasi_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_dokumentasi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_dokumentasi_edit" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_medsos_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_line_under_dokumentasi">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_medsos_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_to_normal"
+                    android:paddingVertical="@dimen/small_to_normal"
+                    android:src="@drawable/ic_media_sosial"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_medsos_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:fontFamily="@font/roboto_reguler"
+                    android:text="Media Sosial"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_medsos_edit"
+                    app:layout_constraintStart_toEndOf="@id/iv_medsos_edit"
+                    app:layout_constraintTop_toTopOf="@id/iv_medsos_edit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/v_line_under_medsos"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_to_normal"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/small_to_normal"
+            android:layout_marginBottom="100dp"
+            android:background="@color/colorGrayscaleLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_medsos_edit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
